@@ -14,7 +14,20 @@ dotenv.config();
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
 
 app.use(express.json({ limit: '10mb' }))
-app.use(cors())
+app.use(
+    cors({
+        origin: process.env.CLIENT_BASE_URL, //frontend url
+        methods: ["GET", "POST", "DELETE", "PUT"],
+        allowedHeaders: [
+            "Content-Type",
+            "Authorization",
+            "Cache-Control",
+            "Expires",
+            "Pragma",
+        ],
+        credentials: true,
+    })
+);
 
 mongoose
     .connect(process.env.MONGO_URL, {
