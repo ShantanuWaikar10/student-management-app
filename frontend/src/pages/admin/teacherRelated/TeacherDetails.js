@@ -39,6 +39,21 @@ const TeacherDetails = () => {
                         Teacher Name: {teacherDetails?.name}
                     </Typography>
                     <Typography variant="h6" gutterBottom>
+                        Teacher Gender: {teacherDetails?.gender}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom>
+                        Teacher Email: {teacherDetails?.email}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom>
+                        Teacher DOB: {teacherDetails?.dob}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom>
+                        Teacher Contact: {teacherDetails?.contact}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom>
+                        Teacher Salary: {teacherDetails?.salary}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom>
                         Class Name: {teacherDetails?.teachSclass?.sclassName}
                     </Typography>
                     {isSubjectNamePresent ? (

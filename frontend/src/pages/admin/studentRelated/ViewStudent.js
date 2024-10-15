@@ -46,6 +46,10 @@ const ViewStudent = () => {
 
     const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
+    const [gender, setGender] = useState('');
+    const [dob, setDob] = useState('');
+    const [contact, setContact] = useState('');
+    const [feePaid, setFeePaid] = useState('');
     const [password, setPassword] = useState('');
     const [sclassName, setSclassName] = useState('');
     const [studentSchool, setStudentSchool] = useState('');
@@ -83,6 +87,10 @@ const ViewStudent = () => {
         if (userDetails) {
             setName(userDetails.name || '');
             setRollNum(userDetails.rollNum || '');
+            setGender(userDetails.rollNum || '');
+            setDob(userDetails.rollNum || '');
+            setContact(userDetails.rollNum || '');
+            setFeePaid(userDetails.rollNum || '');
             setSclassName(userDetails.sclassName || '');
             setStudentSchool(userDetails.school || '');
             setSubjectMarks(userDetails.examResult || '');
@@ -345,6 +353,14 @@ const ViewStudent = () => {
                 Name: {userDetails.name}
                 <br />
                 Roll Number: {userDetails.rollNum}
+                <br />
+                Gender: {userDetails.gender}
+                <br />
+                DOB: {userDetails.dob}
+                <br />
+                Contact: {userDetails.contact}
+                <br />
+                Fee Paid: {userDetails.feePaid}
                 <br />
                 Class: {sclassName.sclassName}
                 <br />

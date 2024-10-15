@@ -13,6 +13,18 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    gender: {
+        type: String,
+    },
+    dob: {
+        type: String,
+    },
+    contact: {
+        type: String,
+    },
+    feePaid: {
+        type: String,
+    },
     sclassName: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'sclass',

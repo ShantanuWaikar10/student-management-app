@@ -19,7 +19,11 @@ const TeacherProfile = () => {
         <ProfileCardContent>
           <ProfileText>Name: {currentUser.name}</ProfileText>
           <ProfileText>Email: {currentUser.email}</ProfileText>
+          <ProfileText>Gender: {currentUser.gender}</ProfileText>
+          <ProfileText>DOB: {currentUser.dob}</ProfileText>
+          <ProfileText>Contact: {currentUser.contact}</ProfileText>
           <ProfileText>Class: {teachSclass.sclassName}</ProfileText>
+          <ProfileText>Salary: {currentUser.salary}</ProfileText>
           <ProfileText>Subject: {teachSubject.subName}</ProfileText>
           <ProfileText>School: {teachSchool.schoolName}</ProfileText>
         </ProfileCardContent>

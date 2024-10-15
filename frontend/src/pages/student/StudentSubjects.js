@@ -85,7 +85,7 @@ const StudentSubjects = () => {
                     Class Details
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                    You are currently in Class {sclassDetails && sclassDetails.sclassName}
+                    You are currently in Class {currentUser.sclassName.sclassName}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                     And these are the subjects:

@@ -64,6 +64,10 @@ const ShowStudents = () => {
         return {
             name: student.name,
             rollNum: student.rollNum,
+            gender: student.gender,
+            dob: student.dob,
+            contact: student.contact,
+            feePaid: student.feePaid,
             sclassName: student.sclassName.sclassName,
             id: student._id,
         };

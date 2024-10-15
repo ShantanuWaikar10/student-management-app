@@ -22,6 +22,10 @@ const AddTeacher = () => {
   }, [dispatch, subjectID]);
 
   const [name, setName] = useState('');
+  const [gender, setGender] = useState('');
+  const [dob, setDob] = useState('');
+  const [contact, setContact] = useState('');
+  const [salary, setSalary] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
 
@@ -34,7 +38,7 @@ const AddTeacher = () => {
   const teachSubject = subjectDetails && subjectDetails._id
   const teachSclass = subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName._id
 
-  const fields = { name, email, password, role, school, teachSubject, teachSclass }
+  const fields = { name, gender, dob, contact, salary, email, password, role, school, teachSubject, teachSclass }
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -71,10 +75,35 @@ const AddTeacher = () => {
           <label>
             Class : {subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName.sclassName}
           </label>
+
           <label>Name</label>
           <input className="registerInput" type="text" placeholder="Enter teacher's name..."
             value={name}
             onChange={(event) => setName(event.target.value)}
+            autoComplete="name" required />
+
+          <label>Gender</label>
+          <input className="registerInput" type="text" placeholder="Enter teacher's gender..."
+            value={gender}
+            onChange={(event) => setGender(event.target.value)}
+            autoComplete="name" required />
+
+          <label>DOB</label>
+          <input className="registerInput" type="text" placeholder="Enter teacher's DOB..."
+            value={dob}
+            onChange={(event) => setDob(event.target.value)}
+            autoComplete="name" required />
+
+          <label>Contact</label>
+          <input className="registerInput" type="text" placeholder="Enter teacher's contact..."
+            value={contact}
+            onChange={(event) => setContact(event.target.value)}
+            autoComplete="name" required />
+
+          <label>Salary</label>
+          <input className="registerInput" type="text" placeholder="Enter teacher's salary..."
+            value={salary}
+            onChange={(event) => setSalary(event.target.value)}
             autoComplete="name" required />
 
           <label>Email</label>

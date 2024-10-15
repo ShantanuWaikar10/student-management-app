@@ -18,6 +18,10 @@ const AddStudent = ({ situation }) => {
 
     const [name, setName] = useState('');
     const [rollNum, setRollNum] = useState('');
+    const [gender, setGender] = useState('');
+    const [dob, setDob] = useState('');
+    const [contact, setContact] = useState('');
+    const [feePaid, setFeePaid] = useState('');
     const [password, setPassword] = useState('')
     const [className, setClassName] = useState('')
     const [sclassName, setSclassName] = useState('')
@@ -53,7 +57,7 @@ const AddStudent = ({ situation }) => {
         }
     }
 
-    const fields = { name, rollNum, password, sclassName, adminID, role, attendance }
+    const fields = { name, rollNum,gender,dob,contact,feePaid, password, sclassName, adminID, role, attendance }
 
     const submitHandler = (event) => {
         event.preventDefault()
@@ -86,7 +90,7 @@ const AddStudent = ({ situation }) => {
 
     return (
         <>
-            <div className="register">
+            <div className="register" style={{marginTop:'70px'}}>
                 <form className="registerForm" onSubmit={submitHandler}>
                     <span className="registerTitle">Add Student</span>
                     <label>Name</label>
@@ -118,6 +122,31 @@ const AddStudent = ({ situation }) => {
                         value={rollNum}
                         onChange={(event) => setRollNum(event.target.value)}
                         required />
+
+                    <label>Gender</label>
+                    <input className="registerInput" type="text" placeholder="Enter student's Gender..."
+                        value={gender}
+                        onChange={(event) => setGender(event.target.value)}
+                        required />
+
+                    <label>DOB</label>
+                    <input className="registerInput" type="text" placeholder="Enter student's DOB..."
+                        value={dob}
+                        onChange={(event) => setDob(event.target.value)}
+                        required />
+
+                    <label>Contact</label>
+                    <input className="registerInput" type="text" placeholder="Enter student's Contact..."
+                        value={contact}
+                        onChange={(event) => setContact(event.target.value)}
+                        required />
+
+                    <label>Fee Paid</label>
+                    <input className="registerInput" type="text" placeholder="Enter student's Fee Paid..."
+                        value={feePaid}
+                        onChange={(event) => setFeePaid(event.target.value)}
+                        required />
+
 
                     <label>Password</label>
                     <input className="registerInput" type="password" placeholder="Enter student's password..."
